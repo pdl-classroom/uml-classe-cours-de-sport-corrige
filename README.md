@@ -13,3 +13,6 @@ Ecrire un modèle du domaine (diagramme de classe) pour la gestion de cours de 
 Utilisez le concept de spécialisation (héritage) lorsque c’est possible et adéquat. Montrez la cardinalité des associations de manière explicite (pas de cardinalité par défaut). Nommez les associations simples. 
 <br><br>
 Ne pas rajouter d’informations qui ne se trouvent pas exprimées dans l’énoncé. Mentionnez au moins 2 contraintes qui ne sont pas modélisées dans votre diagramme en les rédigeant de manière à utiliser au maximum les noms des éléments (classe, attributs, associations) de votre diagramme. 
+
+## Corrigé
+![Classes](uml/classe.png)
