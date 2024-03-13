@@ -1,0 +1,72 @@
+@startuml
+
+' class Sport {
+'   libellé
+' }
+
+  ' class Cours {
+  '   niveau
+  ' }
+together {
+class Salle {
+  nom
+  capacité
+}
+
+class Moniteur {
+}
+
+class Sport {
+  libellé
+}
+
+}
+' class Salle {
+'   nom
+'   capacité
+' }
+
+' class "Créneau horaire" as Creneau {
+'   heure
+'   jour_semaine
+' }
+
+' class Participant {
+'   nom
+' }
+
+' class Moniteur {
+' }
+
+class Compétence {
+  niveau
+}
+
+together {
+  class Cours {
+  niveau
+}
+  class Participant {
+  nom
+}
+  class "Créneau horaire" as Creneau {
+  heure
+  jour_semaine
+}
+}
+
+Moniteur --|> Participant
+
+Cours "*" -- "1" Sport : concerne >
+Salle "*" -up- "*" Sport : compatible avec >
+Salle "1" o-up- "*" Creneau : dans <
+Cours "1" -- "*" Creneau : a lieu dans >
+Participant "*" -- "*" Cours : inscrit à >
+Moniteur "1" -- "*" Cours : entraine >
+Moniteur "*" - "*" Sport : compétent en >
+(Moniteur, Sport) .. Compétence
+
+
+
+
+@enduml
