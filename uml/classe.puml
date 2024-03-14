@@ -1,12 +1,5 @@
 @startuml
 
-' class Sport {
-'   libellé
-' }
-
-  ' class Cours {
-  '   niveau
-  ' }
 together {
 class Salle {
   nom
@@ -21,22 +14,7 @@ class Sport {
 }
 
 }
-' class Salle {
-'   nom
-'   capacité
-' }
 
-' class "Créneau horaire" as Creneau {
-'   heure
-'   jour_semaine
-' }
-
-' class Participant {
-'   nom
-' }
-
-' class Moniteur {
-' }
 
 class Compétence {
   niveau
@@ -57,7 +35,7 @@ together {
 
 Moniteur --|> Participant
 
-Cours "*" --* "1" Sport : concerne >
+Cours "*" -- "1" Sport : concerne >
 Salle "*" -up- "*" Sport : compatible avec >
 Salle "1" *-up- "*" Creneau : dans <
 Cours "1" -- "*" Creneau : a lieu dans >
