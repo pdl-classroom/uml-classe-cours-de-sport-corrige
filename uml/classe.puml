@@ -66,7 +66,9 @@ Moniteur "1" -- "*" Cours : entraine >
 Moniteur "*" - "*" Sport : compétent en >
 (Moniteur, Sport) .. Compétence
 
-
+note top of Moniteur : S'il entraine un cours d'un certain niveau, \nil doit être compétent au dessus de ce niveau \npour le sport de ce cours.
+note bottom of Salle : Si un cours a lieu dans une salle, \nc'est que la salle est compatible avec \nle sport du cours.
+note bottom of Cours : Le nombre de participants d'un cours \nne doit pas dépasser la capacité \nde la salle où il a lieu.
 
 
 @enduml
